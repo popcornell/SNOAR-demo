@@ -122,10 +122,10 @@ footer{color:var(--muted);font-size:13px;padding:40px 0 60px;border-top:1px soli
   the domain mismatch of synthetic training data, but remain well below supervised training. Teacher&ndash;student
   self-training, as in RemixIT, can close part of that gap without clean references.</p>
   <ul>
-    <li><b>Problem.</b> The student is trained only toward the teacher's estimates, so teacher errors, in particular
+    <li><b>Problem:</b> The student is trained only toward the teacher's estimates, so teacher errors, in particular
     over-suppressed speech, cannot be recovered and are propagated: the regression analogue of confirmation bias in
     pseudo-labelling.</li>
-    <li><b>Method.</b> SNOAR (self-training with noise filtering, observation adding and remixing) corrects the
+    <li><b>Proposed method:</b> SNOAR (self-training with noise filtering, observation adding and remixing) corrects the
     teacher's estimates before they are used as self-supervision:
       <ul>
         <li><i>noise filtering</i>: differential noise filtering (DNF) subtracts the teacher's own noise estimate,
@@ -133,10 +133,10 @@ footer{color:var(--muted);font-size:13px;padding:40px 0 60px;border-top:1px soli
         <li><i>observation adding</i>: combining the result with the noisy observation partly restores the
         suppressed speech and attenuates denoising artifacts.</li>
       </ul></li>
-    <li><b>WHAM!</b> From a MixIT teacher, SNOAR reaches 13.25&nbsp;dB SI-SDR, within 0.43&nbsp;dB of a supervised
+    <li><b>Results (WHAM!):</b> From a MixIT teacher, SNOAR reaches 13.25&nbsp;dB SI-SDR, within 0.43&nbsp;dB of a supervised
     topline, outperforms RemixIT on every metric, and has the lowest word error rate of all systems trained without
     clean references.</li>
-    <li><b>CHiME-3 real.</b> SNOAR improves every reference-free quality metric and the word error rate of three
+    <li><b>Results (CHiME-3 real):</b> SNOAR improves every reference-free quality metric and the word error rate of three
     different teachers, whereas RemixIT falls below each of its teachers on every reference-free metric.</li>
   </ul>
 </div>
