@@ -147,23 +147,6 @@ footer{color:var(--muted);font-size:13px;padding:40px 0 60px;border-top:1px soli
 
   <section id="wham">
     <h2>WHAM! <span style="color:var(--muted);font-weight:500">(simulated, tt set)</span></h2>
-    <p class="lede">WSJ0 speech in real urban noise. Examples are chosen by rule, not by ear: first channel, 3–7 s,
-    SNOAR(MixIT) SI-SDR improvement within the 40th–60th percentile of the test set (median 14.7 dB),
-    one utterance per input-SNR bin. Every clip is level-normalised to −26 dBov, and all spectrograms of an
-    example share one colour scale. RemixIT(MixIT) is shown at its dev-selected best checkpoint (step 52,316). Numbers on the tiles are this clip&rsquo;s own scores;
-    WER is from OWSM v3.1 (base) and is noisy on a single sentence, so the table below gives the paper's full-test-set results.</p>
-    <div class="tbl"><table><thead><tr><th>System</th><th>SI-SDR</th><th>STOI</th><th>PESQ</th><th>D-OVRL</th><th>UTMOS</th><th>WER %</th></tr></thead><tbody>
-<tr class=""><td>Unprocessed</td><td>−1.48</td><td>0.751</td><td>1.10</td><td>1.46</td><td>1.38</td><td>19.8</td></tr>
-<tr class=""><td>Clean</td><td>∞</td><td>1.000</td><td>4.64</td><td>3.33</td><td>4.22</td><td>4.7</td></tr>
-<tr class=""><td>Supervised topline</td><td>13.68</td><td>0.952</td><td>2.26</td><td>3.21</td><td>3.60</td><td>9.5</td></tr>
-<tr class="sep"><td>NyTT</td><td>0.20</td><td>0.776</td><td>1.13</td><td>1.60</td><td>1.36</td><td>18.1</td></tr>
-<tr class="sep"><td>NyTT+DNF, teacher</td><td>4.87</td><td>0.847</td><td>1.32</td><td>2.43</td><td>2.05</td><td>17.7</td></tr>
-<tr class=""><td><span class="ind"></span>RemixIT(NyTT+DNF)</td><td>9.32</td><td>0.913</td><td>1.56</td><td>2.61</td><td>2.67</td><td>13.1</td></tr>
-<tr class="snoar"><td><span class="ind"></span>SNOAR(NyTT+DNF)</td><td>10.03</td><td>0.932</td><td>1.77</td><td>3.05</td><td>3.09</td><td>12.6</td></tr>
-<tr class="sep"><td>MixIT, teacher</td><td>8.32</td><td>0.872</td><td>1.54</td><td>2.54</td><td>2.26</td><td>15.3</td></tr>
-<tr class=""><td><span class="ind"></span>RemixIT(MixIT)</td><td>12.10</td><td>0.926</td><td>1.61</td><td>2.98</td><td>3.15</td><td>13.3</td></tr>
-<tr class="snoar"><td><span class="ind"></span>SNOAR(MixIT)</td><td>13.25</td><td>0.942</td><td>2.02</td><td>3.15</td><td>3.45</td><td>10.9</td></tr></tbody></table></div>
-    <p class="tcap">Table 1 of the paper: full WHAM! test set. SNOAR and RemixIT are listed under the teacher they were initialised from.</p>
     <article class="ex" id="wham-0"><header><h3>Example 1</h3><p class="sub">Input SNR -4.4 dB · SNOAR(MixIT) SI-SDRi +14.7 dB</p><p class="txt"><b>Transcript:</b> Military policy was to keep the travel routes open and protect the settled areas</p></header>
 <div class="row top"><button class="tile ref" data-src="audio/wham/00/noisy.mp3" data-dur="5.90"><span class="spec" style="background-image:url(audio/wham/00/noisy.jpg)"><i class="head"></i></span><span class="cap"><span class="name">Noisy input</span><span class="chips"><span class="m"><b>SI-SDR</b>-4.4</span><span class="m"><b>PESQ</b>1.04</span><span class="m"><b>UTMOS</b>1.88</span><span class="m w"><b>WER</b>7%</span></span><span class="asr">military policy <span class="e s" title="said: was">is</span> to keep the travel routes open and protect the settled areas</span></span></button><button class="tile ref" data-src="audio/wham/00/clean.mp3" data-dur="5.90"><span class="spec" style="background-image:url(audio/wham/00/clean.jpg)"><i class="head"></i></span><span class="cap"><span class="name">Clean reference</span><span class="chips"><span class="m"><b>PESQ</b>4.64</span><span class="m"><b>UTMOS</b>4.36</span><span class="m w"><b>WER</b>0%</span></span><span class="asr">military policy was to keep the travel routes open and protect the settled areas</span></span></button><button class="tile ref" data-src="audio/wham/00/sup.mp3" data-dur="5.90"><span class="spec" style="background-image:url(audio/wham/00/sup.jpg)"><i class="head"></i></span><span class="cap"><span class="name">Supervised topline</span><span class="chips"><span class="m"><b>SI-SDR</b>10.6</span><span class="m"><b>PESQ</b>1.73</span><span class="m"><b>UTMOS</b>3.66</span><span class="m w"><b>WER</b>7%</span></span><span class="asr">military policy <span class="e s" title="said: was">is</span> to keep the travel routes open and protect the settled areas</span></span></button><button class="tile ref" data-src="audio/wham/00/nytt.mp3" data-dur="5.90"><span class="spec" style="background-image:url(audio/wham/00/nytt.jpg)"><i class="head"></i></span><span class="cap"><span class="name">NyTT</span><span class="chips"><span class="m"><b>SI-SDR</b>-1.0</span><span class="m"><b>PESQ</b>1.06</span><span class="m"><b>UTMOS</b>1.34</span><span class="m w"><b>WER</b>7%</span></span><span class="asr">military policy <span class="e s" title="said: was">is</span> to keep the travel routes open and protect the settled areas</span></span></button></div>
 <div class="grid"><div class="gh"></div><div class="gh">Teacher</div><div class="gh">RemixIT student</div><div class="gh snoar">SNOAR student</div>
@@ -246,23 +229,6 @@ footer{color:var(--muted);font-size:13px;padding:40px 0 60px;border-top:1px soli
 
   <section id="chime3">
     <h2>CHiME-3 <span style="color:var(--muted);font-weight:500">(real recordings, et05)</span></h2>
-    <p class="lede">Real tablet-microphone recordings in four environments; no clean reference exists, so only
-    reference-free scores are shown. Three teachers differ in the clean speech they were allowed: none (MixIT on
-    CHiME-3 alone), or out-of-domain WSJ0 / LibriSpeech synthetic mixtures. Students are shown at their dev-set
-    selected checkpoints. Two recordings per environment, those whose SNOAR(MixIT) UTMOS gain over its teacher
-    is closest to the median (+0.38).</p>
-    <div class="tbl"><table><thead><tr><th>Teacher</th><th>System</th><th>D-SIG</th><th>D-BAK</th><th>D-OVRL</th><th>UTMOS</th><th>WER %</th></tr></thead><tbody>
-<tr class=""><td></td><td>Unprocessed</td><td>2.05</td><td>1.50</td><td>1.48</td><td>1.38</td><td>22.0</td></tr>
-<tr class="sep"><td>MixIT (real)</td><td>Teacher</td><td>2.77</td><td>2.01</td><td>1.94</td><td>1.62</td><td>22.1</td></tr>
-<tr class=""><td></td><td>RemixIT</td><td>2.67</td><td>1.95</td><td>1.87</td><td>1.57</td><td>20.3</td></tr>
-<tr class="snoar"><td></td><td>SNOAR</td><td>3.09</td><td>2.37</td><td>2.19</td><td>2.10</td><td>18.4</td></tr>
-<tr class="sep"><td>Mix+sup (WSJ)</td><td>Teacher</td><td>3.13</td><td>2.46</td><td>2.28</td><td>2.03</td><td>17.1</td></tr>
-<tr class=""><td></td><td>RemixIT</td><td>2.70</td><td>2.01</td><td>1.91</td><td>1.69</td><td>18.4</td></tr>
-<tr class="snoar"><td></td><td>SNOAR</td><td>3.41</td><td>3.14</td><td>2.68</td><td>2.75</td><td>15.4</td></tr>
-<tr class="sep"><td>Mix+sup (Libri)</td><td>Teacher</td><td>3.06</td><td>2.33</td><td>2.19</td><td>1.87</td><td>17.9</td></tr>
-<tr class=""><td></td><td>RemixIT</td><td>2.81</td><td>2.09</td><td>1.98</td><td>1.74</td><td>17.5</td></tr>
-<tr class="snoar"><td></td><td>SNOAR</td><td>3.35</td><td>2.89</td><td>2.53</td><td>2.63</td><td>16.6</td></tr></tbody></table></div>
-    <p class="tcap">Table 3 of the paper: et05_real, channel 5. Each block is one teacher followed by the RemixIT and SNOAR students adapted from it.</p>
     <article class="ex" id="chime3-0"><header><h3>Bus · F05</h3><p class="sub">Real recording, channel 5 · no clean reference exists</p><p class="txt"><b>Transcript:</b> Yesterday moody&#x27;s investors service raised lilco&#x27;s credit ratings in recognition of the improved outlook for steady financial recovery</p></header>
 <div class="row top"><button class="tile ref" data-src="audio/chime3/00/noisy.mp3" data-dur="7.04"><span class="spec" style="background-image:url(audio/chime3/00/noisy.jpg)"><i class="head"></i></span><span class="cap"><span class="name">Noisy input (CH5)</span><span class="chips"><span class="m"><b>OVRL</b>2.11</span><span class="m"><b>BAK</b>2.11</span><span class="m"><b>UTMOS</b>1.51</span><span class="m w"><b>WER</b>10%</span></span><span class="asr">yesterday moody s <span class="e s" title="said: investors">investor</span> service raised <span class="e s" title="said: lilco">loco</span> s credit ratings in recognition of the improved outlook for steady financial recovery</span></span></button></div>
 <div class="grid"><div class="gh"></div><div class="gh">Teacher</div><div class="gh">RemixIT student</div><div class="gh snoar">SNOAR student</div>
