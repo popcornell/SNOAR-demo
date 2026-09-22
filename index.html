@@ -111,23 +111,15 @@ footer{color:var(--muted);font-size:13px;padding:40px 0 60px;border-top:1px soli
   <h1>SNOAR: Self-training with Noise filtering, Observation adding, and Remixing for Speech Denoising Without Clean References</h1>
   <p class="authors"></p>
   <div class="links"><a href="#wham">WHAM!</a><a href="#chime3">CHiME-3 real</a></div>
-  <p class="abstract">Unsupervised speech denoising methods such as MixIT and noisy-target training can be
-  trained directly on noisy recordings, avoiding the domain mismatch incurred by training on synthetic mixtures of
-  clean speech and noise; however, their performance remains substantially below that of supervised training.
-  Teacher&ndash;student self-training, as in RemixIT, can further improve such systems without clean references by
-  remixing a teacher's separated estimates into new training mixtures that supervise a student. Since the student is
-  trained only toward the teacher's estimates, teacher errors, in particular the over-suppression of speech, cannot
-  be recovered and are propagated as the teacher is iteratively updated from the student: the regression analogue of
-  the confirmation bias known in pseudo-labelling. We propose SNOAR (self-training with noise filtering, observation
-  adding and remixing), a self-training framework that corrects the teacher's estimates before they are used as
-  self-supervision. The noise the teacher leaks into its speech estimate is removed by subtracting its own noise
-  estimate using differential noise filtering (DNF), and the speech it suppresses is partly restored by combining
-  the result with the noisy observation, which also attenuates denoising artifacts. On WHAM!, SNOAR trained from a
-  MixIT teacher reaches 13.25&nbsp;dB SI-SDR, within 0.43&nbsp;dB of a supervised topline trained on the same
-  mixtures with clean targets, outperforms RemixIT on every metric, and attains the lowest word error rate of all
-  systems trained without clean references. On real CHiME-3 recordings, it improves every reference-free quality
-  metric and the word error rate of three different teachers, whereas RemixIT falls below each of its teachers on
-  every reference-free metric.</p>
+  <p class="abstract">Unsupervised denoisers such as MixIT and noisy-target training learn directly from noisy
+  recordings but remain well below supervised training. Teacher&ndash;student self-training, as in RemixIT, can
+  improve them without clean references, but the student only learns the teacher's estimates, so teacher errors,
+  in particular over-suppressed speech, are propagated rather than corrected. We propose SNOAR (self-training with
+  noise filtering, observation adding and remixing), which corrects the teacher's estimates before using them as
+  self-supervision: differential noise filtering (DNF) removes the noise the teacher leaks, and adding back part of
+  the noisy observation restores suppressed speech and attenuates artifacts. On WHAM!, SNOAR from a MixIT teacher
+  comes within 0.43&nbsp;dB SI-SDR of a supervised topline and outperforms RemixIT on every metric. On real CHiME-3
+  recordings it improves all three teachers it starts from, whereas RemixIT falls below each of them.</p>
 </header>
 
 <nav class="tabs"><div class="wrap">
